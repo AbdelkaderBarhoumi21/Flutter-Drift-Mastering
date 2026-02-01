@@ -1,0 +1,57 @@
+name: flutter_drift_advanced_project
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State management 
+  flutter_bloc: ^9.1.1
+  equatable: ^2.0.8
+
+  # Functional Programming
+  dartz: ^0.10.1
+
+  # Local Database (Drift)
+  drift: ^2.30.1
+  sqlite3_flutter_libs: ^0.5.41
+  path_provider: ^2.1.5
+  path: ^1.9.1
+
+  # Network
+  http: ^1.6.0
+  connectivity_plus: ^7.0.0
+
+  # Dependency Injection
+  get_it: ^9.2.0
+
+  # UUID generation 
+  uuid: ^4.5.2
+
+  # Date formatting 
+  intl: ^0.20.2
+
+  # Background tasks 
+  workmanager: ^0.9.0+3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+  # Code generation 
+  drift_dev: ^2.30.1
+  build_runner: ^2.10.5
+
+  # Testing
+  mocktail: ^1.0.4
+  bloc_test: ^10.0.0
+flutter:
+
+  uses-material-design: true
