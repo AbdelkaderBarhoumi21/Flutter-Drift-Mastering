@@ -3,15 +3,12 @@ import 'package:flutter_drift_advanced_project/core/utils/typedef.dart';
 import 'package:flutter_drift_advanced_project/features/transactions/domain/entities/transaction_entity.dart';
 import 'package:flutter_drift_advanced_project/features/transactions/domain/repositories/transaction_repository.dart';
 
-// async is unnecessary when you just return the repository call directly
-class GetTransactionsUseCase
+class GetPendingSyncUseCase
     implements UseCase<List<TransactionEntity>, NoParams> {
-  GetTransactionsUseCase({required this.repository});
+  const GetPendingSyncUseCase({required this.repository});
   final TransactionRepository repository;
+
   @override
   ResultFuture<List<TransactionEntity>> call(NoParams params) =>
-      repository.getTransactions();
-
-  Stream<List<TransactionEntity>> watch(NoParams params) =>
-      repository.watchTransactions();
+      repository.getPendingSync();
 }
