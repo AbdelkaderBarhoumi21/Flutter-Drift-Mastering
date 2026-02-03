@@ -103,6 +103,37 @@ class TransactionModel {
     'updated_at': updatedAt.toIso8601String(),
     'is_deleted': isDeleted,
   };
+
+  TransactionModel copyWith({
+    String? id,
+    String? description,
+    double? amount,
+    DateTime? date,
+    String? categoryId,
+    String? notes,
+    int? syncStatus,
+    DateTime? createdAt,
+    DateTime? updatedAt,
+    DateTime? syncedAt,
+    DateTime? serverUpdatedAt,
+    bool? isPendingSync,
+    bool? isDeleted,
+  }) =>
+      TransactionModel(
+        id: id ?? this.id,
+        description: description ?? this.description,
+        amount: amount ?? this.amount,
+        date: date ?? this.date,
+        categoryId: categoryId ?? this.categoryId,
+        notes: notes ?? this.notes,
+        syncStatus: syncStatus ?? this.syncStatus,
+        createdAt: createdAt ?? this.createdAt,
+        updatedAt: updatedAt ?? this.updatedAt,
+        syncedAt: syncedAt ?? this.syncedAt,
+        serverUpdatedAt: serverUpdatedAt ?? this.serverUpdatedAt,
+        isPendingSync: isPendingSync ?? this.isPendingSync,
+        isDeleted: isDeleted ?? this.isDeleted,
+      );
   // To Drift Companion (for insert/update)
   TransactionsCompanion toCompanion() => TransactionsCompanion.insert(
     id: id,
