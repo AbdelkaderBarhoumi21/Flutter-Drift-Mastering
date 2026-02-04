@@ -32,4 +32,4 @@ class DeleteTransactionEvent extends TransactionEvent {
 }
 
 // Gives users control when they want to force a sync. => call the same syncTransactions()
-class SyncRequested extends TransactionEvent {}
+class SyncRequestedEvent extends TransactionEvent {}
