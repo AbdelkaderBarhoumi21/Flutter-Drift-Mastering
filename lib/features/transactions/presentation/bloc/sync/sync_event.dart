@@ -6,4 +6,14 @@ abstract class SyncEvent extends Equatable {
 }
 
 class StartSyncEvent extends SyncEvent {}
+
 class StopSyncEvent extends SyncEvent {}
+
+class CheckConnectivityEvent extends SyncEvent {}
+
+class SyncStatusUpdatedEvent extends SyncEvent {
+  SyncStatusUpdatedEvent({required this.pendingCount});
+  final int pendingCount;
+  @override
+  List<Object?> get props => [pendingCount];
+}
